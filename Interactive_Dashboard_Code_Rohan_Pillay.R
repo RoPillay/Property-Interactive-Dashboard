@@ -1,4 +1,6 @@
-## ----setup, include=FALSE, warning = FALSE
+# https://github.com/RoPillay
+# Interactive Dashboard R Code
+## setup, include=FALSE, warning = FALSE
 # Loading necessary libraries
 library(plotly)
 library(crosstalk)
@@ -35,7 +37,7 @@ custom_colors <- c(
 )
 
 
-## ----map_plot, echo=FALSE, warning = FALSE
+## map_plot, echo=FALSE, warning = FALSE
 # Interactive plot with points that are color coded based on property type
 plot_ly(shared_data,
         lat = ~lat, lon = ~long,
@@ -56,7 +58,7 @@ plot_ly(shared_data,
   )
 
 
-## ----scatter_plot, echo=FALSE, warning = FALSE
+## scatter_plot, echo=FALSE, warning = FALSE
 # Interactive scatter plot for price vs sq ft
 plot_ly(shared_data,
         x = ~sqft, y = ~price_combined,
@@ -77,7 +79,7 @@ plot_ly(shared_data,
   )
 
 
-## ----table, echo=FALSE, warning = FALSE
+## table, echo=FALSE, warning = FALSE
 # Interactive data table that updates based on point selection on either plot
 datatable(shared_data,
           options = list(pageLength = 5, scrollX = TRUE),
